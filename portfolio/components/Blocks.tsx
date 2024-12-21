@@ -1,3 +1,8 @@
+import { Github } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { Twitter } from 'lucide-react';
+
 interface BlocksPros {
   type: string;
   input: string;
@@ -7,11 +12,18 @@ interface BlocksPros {
 export default function Blocks({ type, input , invert}: BlocksPros) {
   if (type === "text") {
     return (
-      <p className={`hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0 ${invert ? 'border-r-0 border-l-zinc-600' : 'border-l-0 border-r-zinc-600'}`}>
+      <button className={`hover:text-white focus:text-white focus:border-b-amber-200 focus:border-b-2 hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0 ${invert ? 'border-r-0 border-l-zinc-600' : 'border-l-0 border-r-zinc-600'}`}>
         {input}
-      </p>
+      </button>
     );
   }else{
-    return <img src='../'></img>
+    if( input === 'github')
+      return <div className={`hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0 ${invert ? 'border-r-0 border-l-zinc-600' : 'border-l-0 border-r-zinc-600'}`}><Github/></div>
+    else if( input === 'twitter')
+      return <div  className={`hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0 ${invert ? 'border-r-0 border-l-zinc-600' : 'border-l-0 border-r-zinc-600'}`}><Twitter /></div>
+    else if( input === 'linkedin')
+      return <div className={`hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0 ${invert ? 'border-r-0 border-l-zinc-600' : 'border-l-0 border-r-zinc-600'}`}><Linkedin/></div>
+    else  
+      return <div className={`hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0 ${invert ? 'border-r-0 border-l-zinc-600' : 'border-l-0 border-r-zinc-600'}`}><Instagram/></div>  
   }
 }
