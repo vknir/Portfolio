@@ -14,6 +14,6 @@ export default function useScreenSize(query: string) {
     return () => {
       window.removeEventListener("resize", listener);
     };
-  }, []);
+  }, [query]);
   return result;
 }

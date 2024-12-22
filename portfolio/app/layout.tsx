@@ -4,6 +4,7 @@ import Blocks from "@/components/Blocks";
 import useScreenSize from "@/hooks/useScreenSize";
 import Bars3 from "@/components/Bars3";
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,13 +45,13 @@ export default function RootLayout({
           </div>
           {children}
           <div className="flex justify-between border border-x-0 border-b-0 border-t-gray-700">
-            <div className="flex">
+            <div className="flex items-center">
               <Blocks type="text" input="_find-me:" />
               <Blocks type="img" input="linkedin" />
               <Blocks type="img" input="twitter" />
-              <Blocks type="img" input="instagram" />
+              {screen ? <Blocks type="img" input="instagram"/> : <></>}
             </div>
-            <div>
+            <div className="flex items-center">
               <Blocks type="img" input="github" invert={true} />
             </div>
           </div>
