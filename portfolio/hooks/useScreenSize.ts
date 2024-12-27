@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function useScreenSize(query: string) {
-  const [result, setResult] = useState(() => window.matchMedia(query).matches);
+  const [result, setResult] = useState(()=> window.matchMedia(query).matches);
   useEffect(() => {
     const media = window.matchMedia(query);
     const listener = () => {

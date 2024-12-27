@@ -1,3 +1,4 @@
+'use client'
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
@@ -5,19 +6,25 @@ interface BlocksPros {
   type: string;
   input: string;
   invert?: boolean;
+  autoFocus?: string;
 }
 
-export default function Blocks({ type, input, invert }: BlocksPros) {
- const result= input == '_utkarsh-kumar' || input == '_find-me:' || input == '_home'
+export default function Blocks({ type, input, invert, autoFocus }: BlocksPros) {
+  const result =
+    input == "_utkarsh-kumar" || input == "_find-me:" || input == "_home";
+
+  
+  
   if (type === "text") {
     return (
-      <Link href={`${result ? '/':`/${input.substring(1)}`} `}>
+      <Link href={`${result ? "/" : `/${input.substring(1)}`} `}>
         <button
-          className={`hover:text-white focus:text-white focus:border-b-amber-200 focus:border-b-2 hover:bg-slate-800 hover:cursor-pointer py-2 px-4 md:px-10 text-xs md:text-lg border border-y-0 ${
+         
+          className={` outline-none hover:text-white focus:text-white focus:border-b-amber-200 focus:border-b-2 hover:bg-slate-800 hover:cursor-pointer py-2 px-4 md:px-10 text-xs md:text-lg border border-y-0 ${
             invert
               ? "border-r-0 border-l-zinc-600"
               : "border-l-0 border-r-zinc-600"
-          }`}
+          } `}
         >
           {input}
         </button>
