@@ -3,6 +3,7 @@ import "../app/globals.css";
 import Blocks from "@/components/Blocks";
 import useScreenSize from "@/hooks/useScreenSize";
 import Bars3 from "@/components/Bars3";
+import Link from "next/link";
 
 
 export default function RootLayout({
@@ -22,7 +23,7 @@ export default function RootLayout({
                   <p
                     className={`w-72 hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0  border-l-0 border-r-zinc-600`}
                   >
-                    _utkarsh-kumar
+                    <Link href={'/'}><button>_utkarsh-kumar</button></Link>
                   </p>
                   <div className="flex">
                     <Blocks type="text" input="_home" />

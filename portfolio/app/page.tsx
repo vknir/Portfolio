@@ -1,25 +1,28 @@
-import Link from "next/link";
 import Wave from "@/components/Wave";
+import wave from "../assets/wave.svg";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-full w-full flex justify-between relative">
-      <Wave />
-      <div className="text-left h-full flex flex-col py-4 justify-around  ">
-        <div className="flex flex-col gap-4">
+    <div className="h-full w-full flex flex-col items-center relative overflow-hidden">
+      <div className="h-full flex flex-col py-4 justify-center gap-6">
+        <div className="flex flex-col gap-2">
           <p className="text-lg text-white">Hello! I am,</p>
           <h1 className="text-6xl text-white">Utkarsh Kumar</h1>
           <h2 className="text-4xl text-indigo-800">
             {">"} a Web Developer <span className="animate-custom-ping">|</span>
           </h2>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <p>// Welocome to my portfolio</p>
           <p>// explore all my projects on GitHub</p>
         </div>
       </div>
-      <div className="origin-center rotate-180">
-        <Wave />
+
+      <div className="absolute h-fit w-full">
+        <div className="animate-wavey bg-wave-1 w-screen h-16 absolute"></div>
+        <div className="bg-wave-2 h-16 w-full animate-wavey-r "></div>
       </div>
     </div>
   );
