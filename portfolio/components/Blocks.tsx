@@ -2,6 +2,7 @@
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
+
 interface BlocksPros {
   type: string;
   input: string;
@@ -12,6 +13,7 @@ interface BlocksPros {
 export default function Blocks({ type, input, invert, autoFocus }: BlocksPros) {
   const result =
     input == "_utkarsh-kumar" || input == "_find-me:" || input == "_home";
+
 
   
   
