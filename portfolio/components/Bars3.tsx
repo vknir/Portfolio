@@ -1,9 +1,9 @@
 'use client'
 import { useContext } from "react";
-import { ToggleContext } from "./NavListToggle";
+import { ToggleContext } from "@/lib/ToggleContextProvider";
 
 export default function Bars3() {
-  const {toggle, setToggle}= useContext(ToggleContext)
+  const { setToggle}= useContext(ToggleContext)
   return (
     <button onClick={()=>{setToggle(prev=>!prev)}}>
       <svg

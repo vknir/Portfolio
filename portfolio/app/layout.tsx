@@ -4,8 +4,7 @@ import Blocks from "@/components/Blocks";
 import useScreenSize from "@/hooks/useScreenSize";
 import Bars3 from "@/components/Bars3";
 import Link from "next/link";
-import { ToggleContextProvider } from "@/components/NavListToggle";
-import { useContext } from "react";
+import { ToggleContextProvider } from "@/lib/ToggleContextProvider";
 import NavCard from "@/components/NavCard";
 
 export default function RootLayout({
@@ -40,20 +39,19 @@ export default function RootLayout({
               </>
             ) : (
               <>
-                <div className="flex w-full items-center justify-between p-4">
-                  <p>_utkarsh-kumar</p>
-                  <div>
-                    <ToggleContextProvider>
+                <ToggleContextProvider>
+                  <div className="flex w-full items-center justify-between p-4">
+                    <p>_utkarsh-kumar</p>
+                    <div>
                       <Bars3 />
-                    </ToggleContextProvider>
+                    </div>
                   </div>
-                </div>
+                  {!screen && <NavCard />}
+                </ToggleContextProvider>
               </>
             )}
           </div>
-          <ToggleContextProvider>
-            {!screen && <NavCard />}
-          </ToggleContextProvider>
+
           {children}
           <div className="flex justify-between border border-x-0 border-b-0 border-t-gray-700">
             <div className="flex items-center">
