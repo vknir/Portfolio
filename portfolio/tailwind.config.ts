@@ -1,5 +1,6 @@
 import { transform } from "next/dist/build/swc/generated-native";
 import type { Config } from "tailwindcss";
+import scrollbarHide from 'tailwind-scrollbar-hide'
 
 export default {
   content: [
@@ -45,7 +46,7 @@ export default {
         "wavey-r": "waveR 20s linear infinite",
         'custom-ping':"blink 1.2s steps(2,end) infinite",
         'slide-up':'slideUp 1s linear ',
-        fade:'fade .8s ease'
+        fade:'fade .5s ease'
         
       },
       colors: {
@@ -54,5 +55,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [ scrollbarHide],
 } satisfies Config;
