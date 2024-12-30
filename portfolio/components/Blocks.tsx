@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import { ReactEventHandler, useContext } from "react";
 
 
 interface BlocksPros {
@@ -13,14 +14,14 @@ interface BlocksPros {
 export default function Blocks({ type, input, invert, autoFocus }: BlocksPros) {
   const result =
     input == "_utkarsh-kumar" || input == "_find-me:" || input == "_home";
-
-
-  
+    
+  let highlight = window.location.pathname.substring(1) === input.substring(1) 
   
   if (type === "text") {
     return (
       <Link href={`${result ? "/" : `/${input.substring(1)}`} `}>
         <button
+          autoFocus={highlight}
          
           className={` outline-none hover:text-white focus:text-white focus:border-b-amber-200 focus:border-b-2 hover:bg-slate-800 hover:cursor-pointer py-2 px-4 md:px-10 text-xs md:text-lg border border-y-0 ${
             invert

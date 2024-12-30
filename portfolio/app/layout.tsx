@@ -29,11 +29,13 @@ export default function RootLayout({
                       <button>_utkarsh-kumar</button>
                     </Link>
                   </p>
-                  <div className="flex">
-                    <Blocks type="text" input="_home" />
-                    <Blocks type="text" input="_projects" />
-                    <Blocks type="text" input="_about-me" />
-                  </div>
+                 
+                    <div className="flex">
+                      <Blocks type="text" input="_home" />
+                      <Blocks type="text" input="_projects" />
+                      <Blocks type="text" input="_about-me" />
+                    </div>
+                
                 </div>
                 <Blocks type="text" invert={true} input="_contact-me" />
               </>

@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "wave-1": "url(../assets/wavesOpacity.svg)",
-        "wave-2": "url(../assets/wave.svg)",
+        "wave-1": "url(../assets/svg/wavesOpacity.svg)",
+        "wave-2": "url(../assets/svg/wave.svg)",
 
       },
       keyframes: {
@@ -33,6 +33,10 @@ export default {
         blink:{
           '0%':{opacity:'100'},
           '100%':{opacity:'0 ', }
+        },
+        fade:{
+          '0%':{opacity: '0'},
+          '100%':{opacity:'.8'}
         }
       },
 
@@ -40,7 +44,9 @@ export default {
         wavey: "wave 30s linear infinite",
         "wavey-r": "waveR 20s linear infinite",
         'custom-ping':"blink 1.2s steps(2,end) infinite",
-        'slide-up':'slideUp 1s linear '
+        'slide-up':'slideUp 1s linear ',
+        fade:'fade .8s ease'
+        
       },
       colors: {
         background: "var(--background)",

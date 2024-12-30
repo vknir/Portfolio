@@ -1,5 +1,3 @@
-import Wave from "@/components/Wave";
-import wave from "../assets/wave.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,7 +7,7 @@ export default function Home() {
       <div className="h-full flex flex-col py-4 justify-center gap-6 animate-slide-up">
         <div className="flex flex-col gap-2">
           <p className="text-lg text-white">Hello! I am,</p>
-          <h1 className=" text-5xl md:text-6xl text-white">Utkarsh Kumar</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-white">Utkarsh Kumar</h1>
           <h2 className="text-2xl md:text-4xl text-indigo-800">
             {">"} a Web Developer <span className="animate-custom-ping ">|</span>
           </h2>
