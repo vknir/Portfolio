@@ -10,13 +10,13 @@ import { GithubIcon } from "lucide-react";
 
 export default function ProjectCard(props: IProjectCardProps) {
   return (
-    <div className="flex flex-col justify-between gap-4 w-full max-w-[400px] text-left ">
+    <div className="flex flex-col justify-between gap-2 w-full max-w-[400px] text-left">
       <p>
         {" "}
-        <span className="text-blue-700">Project {props.projectNo}</span>{" "}
+        <span className="text-indigo-700">Project {props.projectNo}</span>{" "}
       </p>
-      <div className="flex flex-col justify-center hover:scale-105 transition-all duration-200">
-        <Image className="rounded-t-xl w-full h-full" src={props.img} alt="" />
+      <div className="flex flex-col justify-center">
+        <Image className="rounded-t-xl w-full h-full border border-x-0 border-y-0 hover:border-white" src={props.img} alt="" />
         <div className="rounded-b-xl bg-gray-950 p-6 flex flex-col gap-4">
           {props.description}
           <div className="flex items-center gap-4 text-white text-sm">

@@ -3,7 +3,7 @@ import right from "../assets/svg/chevron-right.svg";
 
 export default function ProjectList({ title }: { title: string }) {
   return (
-    <div className="hover:text-white hover:cursor-pointer">
+    <div className="hover:text-white ">
       {" "}
       <p className="hover:text-white">
         <Image className="inline" alt="" src={right}></Image>
