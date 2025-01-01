@@ -1,13 +1,28 @@
-export default function Aboutme(){
-    return<div className="overflow-auto scrollbar-hide flex">
-        <div className="w-72 h-full border border-gray-700 border-y-0 border-r border-l-0"> {/* left column*/}
-            <div className="h-full w-32 border border-gray-700 border-y-0 flex"> {/* icon bar */}
-            </div> 
+import Image from "next/image";
+import down from "../../assets/svg/chevron-down.svg";
+import ArrowInfo from "@/components/ArrowInfo";
 
-            <div className=""> {/* text section*/}
-                <div className="text-white"><p>professional-info</p></div>
-            </div>
-        </div> 
-        <div className="w-full h-full"></div> {/*right column */}
+export default function Aboutme() {
+  return (
+    <div className="h-full w-full  flex">
+      <div className="w-72 h-full flex  border border-gray-700 border-y-0 border-l-0 border-r">
+        {/*left column*/}
+        <div className="w-24 h-full border border-y-0 border-r border-l-0 border-gray-700">
+          {/** icon bar */}
+        </div>
+        <div className="w-full h-full ">
+          {/** text section */}
+          <div className="flex py-2 px-1 items-center text-left gap-2 border border-x-0 border-t-0 border-b-gray-700">
+            <Image src={down} alt="" />
+            <p>professional-info</p>
+          </div>
+          <div className="border border-x-0 border-t-0 border-b-gray-700">
+            {/** folder texts */}
+            <ArrowInfo type={'folder'} title={'skills'}/>
+          </div>
+        </div>
+      </div>
+      <div className="h-full "></div>
     </div>
+  );
 }
