@@ -9,6 +9,7 @@ export default function Aboutme() {
         {/*left column*/}
         <div className="w-24 h-full border border-y-0 border-r border-l-0 border-gray-700">
           {/** icon bar */}
+          <div></div>
         </div>
         <div className="w-full h-full ">
           {/** text section */}
@@ -18,11 +19,22 @@ export default function Aboutme() {
           </div>
           <div className="border border-x-0 border-t-0 border-b-gray-700">
             {/** folder texts */}
-            <ArrowInfo type={'folder'} title={'skills'}/>
+            <ArrowInfo type={"folder"} title={"skills"} />
           </div>
         </div>
       </div>
-      <div className="h-full "></div>
+      <div className="h-full  flex flex-col">
+        {/**right column */}
+        <div className="border border-y-0 border-l-0 border-r-gray-700">
+          {/**header */}
+        </div>
+        <div className="h-full w-fit border border-x-0 border-b-0 border-t-gray-700">
+          {/**main content */}
+          <p>
+            
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

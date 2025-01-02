@@ -20,14 +20,14 @@ export default function ArrowInfo({ type, title }: ArrowInfoProps) {
   
   if (click) {
     return (
-      <div className="text-white flex items-center" onClick={handleClick} >
+      <div className="text-white flex gap-2 items-center p-1" onClick={handleClick} >
         <Image alt="down arrow" src={down}></Image>
         <p>{title}</p>
       </div>
     );
   } else {
     return (
-      <div className="hover:text-white flex items-center" onClick={handleClick}>
+      <div className="hover:text-white flex gap-2 items-center p-1" onClick={handleClick}>
         <Image alt="right arrow" className="text-white" src={right}></Image>
         <p>{title}</p>
       </div>
