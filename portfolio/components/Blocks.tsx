@@ -20,8 +20,11 @@ export default function Blocks({ type, input, invert, autoFocus }: BlocksPros) {
     return (
       <Link href={`${result ? "/" : `/${input.substring(1)}`} `}>
         <button
+          onBlur={(e) => {
+            if (e.relatedTarget === null) e.target.focus(); //keeps focus https://adueck.github.io/blog/keep-focus-when-clicking-on-element-react/
+          }}
           autoFocus={highlight}
-          className={` outline-none hover:text-white focus:text-white focus:border-b-amber-200  focus:border-b-2 hover:bg-slate-800 hover:cursor-pointer py-2 px-4 md:px-10 text-xs md:text-lg border border-y-0 ${
+          className={` outline-none hover:text-white focus:text-white focus:ring-1  focus:ring-inset ring-amber-100 hover:bg-slate-800 hover:cursor-pointer py-2 px-4 md:px-10 text-xs md:text-lg border border-y-0 ${
             invert
               ? "border-r-0 border-l-zinc-600"
               : "border-l-0 border-r-zinc-600"

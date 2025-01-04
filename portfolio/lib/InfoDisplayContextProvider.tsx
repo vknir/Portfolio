@@ -1,12 +1,47 @@
-'use client'
-import { useContext, createContext,  } from "react"
+"use client";
+import {
+  useContext,
+  createContext,
+  useEffect,
+  Dispatch,
+  SetStateAction,
+  useState,
+} from "react";
 
-type Props = {
-    children: React.ReactNode;
+type Prop = {
+  children: React.ReactNode;
 };
-  
 
-
-export default function InfoDisplayContextProvider({children}:Props){
-
+type InfoType={ // info is state variable 
+  icon:string,
+  topic:string
 }
+
+//Type of context created 
+type InfoDisplayType = { 
+  info: InfoType
+  setInfo: Dispatch<SetStateAction<InfoType>>;
+};
+
+const InfoDisplayContext = createContext<InfoDisplayType>({
+  info: {
+    icon:'profession',
+    topic:'skills'
+  },
+  setInfo : ()=>{}
+});
+
+function InfoDisplayContextProvider({ children }: Prop) {
+  const initialValue= {
+    icon:'profession',
+    topic:'skills'
+  }
+  const [info, setInfo] = useState(initialValue);
+  return (
+    <InfoDisplayContext.Provider value={{ info, setInfo }}>
+      {children}
+    </InfoDisplayContext.Provider>
+  );
+}
+
+export {InfoDisplayContext, InfoDisplayContextProvider}

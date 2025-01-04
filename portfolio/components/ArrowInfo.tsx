@@ -14,7 +14,7 @@ export default function ArrowInfo({ type, title }: ArrowInfoProps) {
 
   const [click, setClick] = useState(false);
   const  handleClick=()=>{
-    setClick(prev=> !prev)
+    setClick(prev=> true)
 }
 
   
