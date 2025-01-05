@@ -14,7 +14,7 @@ export default function Aboutme() {
   if (screen) {
     return (
       <InfoDisplayContextProvider>
-        <div className="h-full w-full flex">
+        <div className="h-full overflow-y-hidden flex justify-center">
           <div className="w-fit h-full flex border border-gray-700 border-y-0 border-l-0 border-r">
             {/*left column*/}
             <div className="w-24 h-full border border-y-0 border-r border-l-0 border-gray-700">
@@ -37,7 +37,7 @@ export default function Aboutme() {
             </div>
           </div>
 
-          <div className="h-full w-full flex flex-col">
+          <div className=" w-full flex flex-col overflow-x-hidden">
             {/**right column */}
             {/**main content */}
             <RightColumn />

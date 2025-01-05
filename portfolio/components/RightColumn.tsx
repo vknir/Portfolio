@@ -9,25 +9,24 @@ export default function MainContent() {
   const { info } = useContext(InfoDisplayContext);
   const load = useLoader(1);
   return (
-    <>
-      <div className="w-full h-fit  border border-b-gray-700 border-x-0 border-t-0">
+    <div className="flex-col h-full overflow-y-hidden flex justify-center">
+      <div className="w-full h-fit border border-b-gray-700 border-x-0 border-t-0">
+
         <p className="px-4 py-2 border w-fit text-white  border-r-gray-700  border-b-0 border-t-0 border-l-0">
           {info.topic}.txt
         </p>
       </div>
-      <div className="flex justify-center items-center h-full">
+      <div className="h-full overflow-y-hidden flex justify-center">
         {load ? (
           <div className="h-full w-full flex justify-center items-center">
             <Loading />
           </div>
         ) : (
-          <div className="h-full w-full overflow-hidden">
-            {
-              <RightColumnText/>
-            }
+          <div className="h-full w-full overflow-y-auto scrollbar-hide">
+            {<RightColumnText />}
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
