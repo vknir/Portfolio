@@ -20,8 +20,8 @@ export default function ProjectCard(props: IProjectCardProps) {
         <div className="rounded-b-xl bg-gray-950 p-6 flex flex-col gap-4">
           {props.description}
           <div className="flex items-center gap-4 text-white text-sm">
-            <a className="p-2 rounded-sm bg-slate-800 hover:scale-110 hover:brightness-105" target="_blank" href={props.live}>live-project</a>
-            <a className="p-2 rounded-sm bg-slate-800 hover:scale-110 hover:brightness-105" target="_blank" href={props.github}>
+            <a className="p-2 rounded-sm bg-slate-800 transition-all duration-200 hover:scale-110 hover:brightness-105" target="_blank" href={props.live}>live-project</a>
+            <a className="p-2 rounded-sm bg-slate-800 hover:scale-110 hover:brightness-105 transition-all duration-200" target="_blank" href={props.github}>
               <div className="">
               <GithubIcon size={20} />
               </div>

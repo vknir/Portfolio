@@ -13,10 +13,10 @@ export default function InfoIconBar() {
   return (
     <div className="flex flex-col items-center py-6 gap-10">
       <div  className="hover:cursor-pointer hover:text-white" onClick={() => setInfo({icon:'profession', topic:'skills'})}>
-        {info.icon === "profession" ? <Terminal size={25} color="white" /> : <Terminal size={25} />}
+        {info.icon === "profession" ? <Terminal size={28} color="white" /> : <Terminal size={28} />}
       </div>
       <div className="hover:cursor-pointer hover:text-white" onClick={() => setInfo({icon:'personal', topic:'bio'})}>
-        {info.icon === "personal" ? <SquareUser size={25} color="white" /> : <SquareUser size={25} />}
+        {info.icon === "personal" ? <SquareUser size={28} color="white" /> : <SquareUser size={28} />}
       </div>
     </div>
   );

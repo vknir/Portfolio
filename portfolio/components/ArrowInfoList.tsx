@@ -8,11 +8,14 @@ import right from "../assets/svg/chevron-right.svg";
 import { useState } from "react";
 
 export default function ArrowInfoList() {
-  const { info } = useContext(InfoDisplayContext);
+  const { info, setInfo } = useContext(InfoDisplayContext);
   const [highlight, setHighlight] = useState(info.topic);
 
   const handleClick = (topic: string) => {
     setHighlight(topic);
+    setInfo((prev) => {
+      return { icon: prev.icon, topic: topic };
+    });
   };
 
   switch (info.icon) {
@@ -49,38 +52,38 @@ export default function ArrowInfoList() {
           </div>
         </>
       );
-      case "personal":
-        return (
-          <>
-            <div className="flex flex-col gap-2 py-2">
-              <div
-                onClick={() => handleClick("hobbies")}
-                className="text flex gap-2 items-center p-1 hover:text-white hover:cursor-pointer"
-              >
-                {highlight === "hobbies" ? (
-                  <Image alt="down arrow" src={down}></Image>
-                ) : (
-                  <Image alt="down right" src={right}></Image>
-                )}
-                <p className={highlight === "hobbies" ? "text-white" : ""}>
-                  hobbies.txt
-                </p>
-              </div>
-              <div
-                onClick={() => handleClick("intrests")}
-                className="text flex gap-2 items-center p-1 hover:text-white hover:cursor-pointer"
-              >
-                {highlight === "intrests" ? (
-                  <Image alt="down arrow" src={down}></Image>
-                ) : (
-                  <Image alt="down right" src={right}></Image>
-                )}
-                <p className={highlight === "intrests" ? "text-white" : ""}>
-                  intrests.txt
-                </p>
-              </div>
+    case "personal":
+      return (
+        <>
+          <div className="flex flex-col gap-2 py-2">
+            <div
+              onClick={() => handleClick("hobbies")}
+              className="text flex gap-2 items-center p-1 hover:text-white hover:cursor-pointer"
+            >
+              {highlight === "hobbies" ? (
+                <Image alt="down arrow" src={down}></Image>
+              ) : (
+                <Image alt="down right" src={right}></Image>
+              )}
+              <p className={highlight === "hobbies" ? "text-white" : ""}>
+                hobbies.txt
+              </p>
             </div>
-          </>
-        );  
+            <div
+              onClick={() => handleClick("intrests")}
+              className="text flex gap-2 items-center p-1 hover:text-white hover:cursor-pointer"
+            >
+              {highlight === "intrests" ? (
+                <Image alt="down arrow" src={down}></Image>
+              ) : (
+                <Image alt="down right" src={right}></Image>
+              )}
+              <p className={highlight === "intrests" ? "text-white" : ""}>
+                intrests.txt
+              </p>
+            </div>
+          </div>
+        </>
+      );
   }
 }
