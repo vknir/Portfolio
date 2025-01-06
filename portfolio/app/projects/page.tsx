@@ -27,7 +27,7 @@ export default function Projects() {
               projects
             </p>
           </div>
-          <div className="flex p-4 flex-col gap-2 text-lg border border-t-0 border-l-0 border-r-gray-700 border-b-gray-700">
+          <div className="flex p-4 flex-col gap-2 text-lg border border-t-0 border-l-0 border-r-gray-700 border-b-0">
             <ProjectList title={"Next.js"} />
             <ProjectList title="React.js" />
             <ProjectList title="Tailwind" />
@@ -46,9 +46,9 @@ export default function Projects() {
             <div className="w-full flex flex-col">
               {" "}
               {/*right column heading */}
-              <div className="w-fit p-2 text-white hover:cursor-pointer border border-gray-700 border-y-0 border-l-0 border-r flex gap-3">
+              <div className="w-fit p-2 text-white hover:cursor-pointer border border-gray-700 border-y-0 border-l-0 border-r flex gap-3 items-center justify-center">
                 <p>page.tsx</p>
-                <p> x</p>
+                <p className="text-xs"> x</p>
               </div>
               {/*right column project display section*/}
               <div className="h-full border flex justify-center  border-gray-700 border-x-0 border-t border-b-0 w-full overflow-auto scrollbar-hide">

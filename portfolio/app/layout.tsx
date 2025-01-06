@@ -22,13 +22,13 @@ export default function RootLayout({
             {screen ? (
               <>
                 <div className="flex">
-                  <p
-                    className={`w-72 hover:text-white hover:bg-slate-800 hover:cursor-pointer py-2 px-10 border border-y-0  border-l-0 border-r-zinc-600`}
+                  <div
+                    className={`w-72 hover:bg-slate-800  py-2 px-10 border border-y-0  border-l-0 border-r-zinc-600`}
                   >
-                    <Link href={"/"}>
-                      <button>_utkarsh-kumar</button>
+                    <Link className="hover:cursor-pointer hover:text-white" href={"/"}>
+                      _utkarsh-kumar
                     </Link>
-                  </p>
+                  </div>
                  
                     <div className="flex">
                       <Blocks type="text" input="_home" />
@@ -57,7 +57,7 @@ export default function RootLayout({
           {children}
           <div className="flex justify-between border border-x-0 border-b-0 border-t-gray-700">
             <div className="flex items-center">
-              <Blocks type="text" input="_find-me:" />
+              <p className="hover:text-white hover:bg-slate-800 hover:cursor-pointer h-full flex items-center px-4 md:px-10 border border-y-0 border-r-gray-700 border-l-0">_find-me:</p>
               <Blocks type="img" input="linkedin" />
               <Blocks type="img" input="twitter" />
               {screen ? <Blocks type="img" input="instagram" /> : <></>}

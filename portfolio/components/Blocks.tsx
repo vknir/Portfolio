@@ -12,7 +12,7 @@ interface BlocksPros {
 
 export default function Blocks({ type, input, invert, autoFocus }: BlocksPros) {
   const result =
-    input == "_utkarsh-kumar" || input == "_find-me:" || input == "_home";
+    input == "_utkarsh-kumar"  || input == "_home";
 
   let highlight = window.location.pathname.substring(1) === input.substring(1);
 
