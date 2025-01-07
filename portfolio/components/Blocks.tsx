@@ -10,11 +10,11 @@ interface BlocksPros {
   autoFocus?: string;
 }
 
-export default function Blocks({ type, input, invert, autoFocus }: BlocksPros) {
+export default function Blocks({ type, input, invert }: BlocksPros) {
   const result =
     input == "_utkarsh-kumar"  || input == "_home";
 
-  let highlight = window.location.pathname.substring(1) === input.substring(1);
+  const highlight = window.location.pathname.substring(1) === input.substring(1);
 
   if (type === "text") {
     return (

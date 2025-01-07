@@ -11,9 +11,9 @@ export default function Home() {
             {">"} a Web Developer <span className="animate-custom-ping ">|</span>
           </h2>
         </div>
-        <div className="flex flex-col gap-2">
-          <p>// Welocome to my portfolio</p>
-          <p>// explore all my projects on GitHub</p>
+        <div className="flex flex-col gap-2"  >
+          <p>{'// Welocome to my portfolio'}</p>
+          <p>{'// explore all my projects on GitHub'}</p>
         </div>
       </div>
 

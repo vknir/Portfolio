@@ -10,11 +10,11 @@ type ArrowInfoProps = {
 };
 
 
-export default function ArrowInfo({ type, title }: ArrowInfoProps) {
+export default function ArrowInfo({  title }: ArrowInfoProps) {
 
   const [click, setClick] = useState(false);
   const  handleClick=()=>{
-    setClick(prev=> true)
+    setClick(()=> true)
 }
 
   
