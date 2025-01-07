@@ -13,8 +13,8 @@ import Loading from "../../components/Loading";
 
 export default function Projects() {
   const screen = useScreenSize("(min-width:1024px)");
-  const time = useLoader(1);
-  
+  const time = useLoader(0.7);
+
   if (screen) {
     return (
       <div className="h-full w-full flex overflow-hidden ">
@@ -52,33 +52,41 @@ export default function Projects() {
               </div>
               {/*right column project display section*/}
               <div className="h-full border flex justify-center  border-gray-700 border-x-0 border-t border-b-0 w-full overflow-auto scrollbar-hide">
-                <div className="grid grid-cols-2 gap-10 p-8">
+                <div className="grid grid-cols-2 gap-20 p-8">
                   <ProjectCard
                     projectNo={1}
+                    title="Chat Box"
                     github="https://github.com/vknir/Chat-App"
                     live="https://chat-app-umber-nine-52.vercel.app/"
-                    description="A real time chat app, join a room and chat away."
+                    description="A real time chat app. Just join a room and chat away."
                     img={chat}
                   />
                   <ProjectCard
+                    title="Our App"
                     projectNo={2}
                     github="https://github.com/vknir/Our-App"
                     live="https://our-app-coral.vercel.app/"
-                    description=""
+                    description="My version of a blog appliacation. Post about things you like, follow the accounts you want to."
                     img={ourApp}
                   />
                   <ProjectCard
+                    title="Code Editor"
                     projectNo={3}
                     github="https://github.com/vknir/Code-Editor"
                     live="https://code-editor-vknir.netlify.app/"
-                    description=""
+                    description={
+                      "Wnat to test out a piece of code?" +
+                      "\n" +
+                      "Use Code Editor and see the results."
+                    }
                     img={codeEditor}
                   />
                   <ProjectCard
+                    title="Make-a-List"
                     projectNo={4}
                     github="https://github.com/vknir/E2E_Todo"
                     live="https://make-a-list-lac.vercel.app/"
-                    description=""
+                    description="A web app used make list, add or remove an item as you like it."
                     img={list}
                   />
                 </div>
@@ -94,34 +102,42 @@ export default function Projects() {
         {time ? (
           <Loading />
         ) : (
-          <div className="h-full w-full p-10 flex flex-col items-center gap-10 ">
+          <div className="h-full text-sm w-full p-10 flex flex-col items-center gap-10 ">
             {" "}
             <ProjectCard
               projectNo={1}
+              title="Chat Box"
               github="https://github.com/vknir/Chat-App"
               live="https://chat-app-umber-nine-52.vercel.app/"
-              description="A real time chat app, join a room and chat away."
+              description="A real time chat app. Just join a room and chat away."
               img={chat}
             />
             <ProjectCard
+              title="Our App"
               projectNo={2}
               github="https://github.com/vknir/Our-App"
               live="https://our-app-coral.vercel.app/"
-              description=""
+              description="My version of a blog appliacation. Post about things you like, follow the accounts you want to."
               img={ourApp}
             />
             <ProjectCard
+              title="Code Editor"
               projectNo={3}
               github="https://github.com/vknir/Code-Editor"
               live="https://code-editor-vknir.netlify.app/"
-              description=""
+              description={
+                "Wnat to test out a piece of code?" +
+                "\n" +
+                "Use Code Editor and see the results."
+              }
               img={codeEditor}
             />
             <ProjectCard
+              title="Make-a-List"
               projectNo={4}
               github="https://github.com/vknir/E2E_Todo"
               live="https://make-a-list-lac.vercel.app/"
-              description=""
+              description="A web app used make list, add or remove an item as you like it."
               img={list}
             />
           </div>

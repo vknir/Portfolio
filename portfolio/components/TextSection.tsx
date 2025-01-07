@@ -11,14 +11,14 @@ export default function TextSection() {
       return (
         <>
           <Image src={down} alt="" />
-          <p>professional-info</p>
+          <p className="text-sm md:text-base">professional-info</p>
         </>
       );
     case "personal":
       return (
         <>
           <Image src={down} alt="" />
-          <p>personal-info</p>
+          <p className="text-sm md:text-base">personal-info</p>
         </>
       );  
   }

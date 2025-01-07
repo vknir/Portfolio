@@ -20,9 +20,7 @@ export default function NavCard() {
           _projects
         </a>
 
-        <a className="hover:brightness-110" href={"/contact-me"}>
-          _contact-me
-        </a>
+       
       </div>
     );
   }
