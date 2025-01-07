@@ -41,7 +41,6 @@ export default function ArrowInfoList() {
     case "personal":
       return (
         <>
-        {console.log(info)}
           <div className="flex flex-col gap-2 py-2">
             <div onClick={() => handleClick("personal","bio")} className="flex gap-2 items-center p-1 hover:text-white hover:cursor-pointer">
               {highlight === "bio" ? (
