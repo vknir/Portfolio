@@ -1,7 +1,7 @@
 "use client";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
-import { ReactEventHandler, useContext } from "react";
+
 
 interface BlocksPros {
   type: string;

@@ -1,9 +1,9 @@
 "use client";
 import { ToggleContext } from "@/lib/ToggleContextProvider";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 export default function NavCard() {
-  const { toggle, setToggle } = useContext(ToggleContext);
+  const { toggle  } = useContext(ToggleContext);
 
   if (toggle) {
     return (

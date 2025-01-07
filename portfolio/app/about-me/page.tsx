@@ -4,8 +4,7 @@ import { InfoDisplayContextProvider } from "@/lib/InfoDisplayContextProvider";
 import InfoIconBar from "@/components/InfoIconBar";
 import TextSection from "@/components/TextSection";
 import useScreenSize from "@/hooks/useScreenSize";
-import useLoader from "@/hooks/useLoader";
-import Loading from "@/components/Loading";
+
 import RightColumn from "@/components/RightColumn";
 
 export default function Aboutme() {

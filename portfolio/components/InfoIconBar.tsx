@@ -1,9 +1,8 @@
 "use client";
 import { SquareUser } from "lucide-react";
-import { Joystick } from "lucide-react";
 import { Terminal } from "lucide-react";
 import { InfoDisplayContext } from "@/lib/InfoDisplayContextProvider";
-import { Fragment, useContext } from "react";
+import {  useContext } from "react";
 import useScreenSize from "@/hooks/useScreenSize";
 
 export default function InfoIconBar() {

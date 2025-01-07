@@ -1,7 +1,6 @@
 "use client";
 import { useContext } from "react";
 import { InfoDisplayContext } from "@/lib/InfoDisplayContextProvider";
-import ArrowInfo from "./ArrowInfo";
 import Image from "next/image";
 import down from "../assets/svg/chevron-down.svg";
 import right from "../assets/svg/chevron-right.svg";
