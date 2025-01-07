@@ -37,7 +37,7 @@ export default function RootLayout({
                     </div>
                 
                 </div>
-                <Blocks type="text" invert={true} input="_contact-me" />
+               
               </>
             ) : (
               <>
