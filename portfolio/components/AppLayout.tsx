@@ -18,7 +18,7 @@ export default function AppLayout({
   return (
     <Suspense>
       <html lang="en">
-        <body className="bg-gray-950 h-screen w-screen p-5 md:p-10">
+        <body className="bg-gray-950 h-screen w-screen p-5 md:p-10 font-mono font-thin">
           <div className="relative  w-full h-full flex flex-col justify-between border border-gray-700 bg-slate-900 text-slate-500 rounded-lg m-auto">
             <div className="flex border  justify-between w-full border-gray-700 border-t-0 border-r-0 border-l-0">
               {screen ? (

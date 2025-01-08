@@ -16,8 +16,8 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex flex-col gap-2">
-            <p>{"// Welocome to my portfolio"}</p>
-            <p>{"// explore all my projects on GitHub"}</p>
+            <p>{"// Welcome to my portfolio"}</p>
+            <p>{"// Explore all my projects on GitHub"}</p>
           </div>
         </div>
 
