@@ -1,3 +1,4 @@
+'use client'
 import { Github } from 'lucide-react';
 
 const App = () => {

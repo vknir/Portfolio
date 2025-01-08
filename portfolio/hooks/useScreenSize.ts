@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 
 export default function useScreenSize(query: string) {
-  if (typeof window !== undefined) {
+  const isSSR = typeof window === "undefined";
+  if (!isSSR) {
     const [result, setResult] = useState(
-      () => window.matchMedia(query).matches
+      () => window?.matchMedia(query).matches
     );
     useEffect(() => {
       const media = window.matchMedia(query);

@@ -1,3 +1,4 @@
+'use client'
 import { useContext } from "react";
 import { InfoDisplayContext } from "@/lib/InfoDisplayContextProvider";
 export default function RightColumnText() {

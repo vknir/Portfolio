@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { useContext } from "react";
 import { InfoDisplayContext } from "@/lib/InfoDisplayContextProvider";
 import useLoader from "@/hooks/useLoader";

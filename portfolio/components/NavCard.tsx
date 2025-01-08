@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { ToggleContext } from "@/lib/ToggleContextProvider";
 import { useContext } from "react";
 

@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import right from "../assets/svg/chevron-right.svg";
 

@@ -1,3 +1,4 @@
+'use client'
 import { Linkedin } from 'lucide-react';
 
 const App = () => {

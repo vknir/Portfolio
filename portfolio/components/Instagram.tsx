@@ -1,3 +1,4 @@
+'use client'
 import { Instagram } from 'lucide-react';
 
 const App = () => {

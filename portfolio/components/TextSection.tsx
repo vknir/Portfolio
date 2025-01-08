@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import Image from "next/image";
 import down from "../assets/svg/chevron-down.svg";
 import { useContext } from "react";

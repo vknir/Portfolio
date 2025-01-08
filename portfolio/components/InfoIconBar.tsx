@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { SquareUser } from "lucide-react";
 import { Terminal } from "lucide-react";
 import { InfoDisplayContext } from "@/lib/InfoDisplayContextProvider";

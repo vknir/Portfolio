@@ -1,3 +1,4 @@
+'use client'
 interface IProjectCardProps {
   projectNo: number;
   title:string,

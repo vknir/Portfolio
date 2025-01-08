@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import wave from '../assets/wavesOpacity.svg'
 export default function Wave() {
